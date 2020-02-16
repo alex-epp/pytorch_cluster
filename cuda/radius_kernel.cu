@@ -2,8 +2,7 @@
 
 #include "compat.cuh"
 #include "utils.cuh"
-
-#define THREADS 1024
+#include "threads.cuh"
 
 template <typename scalar_t>
 __global__ void

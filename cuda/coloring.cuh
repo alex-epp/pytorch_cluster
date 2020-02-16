@@ -3,9 +3,7 @@
 #include <ATen/ATen.h>
 
 #include "compat.cuh"
-
-#define THREADS 1024
-#define BLOCKS(N) (N + THREADS - 1) / THREADS
+#include "threads.cuh"
 
 #define BLUE_PROB 0.53406
 

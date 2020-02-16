@@ -3,9 +3,7 @@
 #include <ATen/cuda/detail/TensorInfo.cuh>
 
 #include "compat.cuh"
-
-#define THREADS 1024
-#define BLOCKS(N) (N + THREADS - 1) / THREADS
+#include "threads.cuh"
 
 template <typename scalar_t>
 __global__ void grid_kernel(int64_t *cluster,

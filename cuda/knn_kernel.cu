@@ -2,8 +2,7 @@
 
 #include "compat.cuh"
 #include "utils.cuh"
-
-#define THREADS 1024
+#include "threads.cuh"
 
 template <typename scalar_t> struct Cosine {
   static inline __device__ scalar_t dot(const scalar_t *a, const scalar_t *b,

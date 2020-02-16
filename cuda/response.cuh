@@ -3,9 +3,7 @@
 #include <ATen/ATen.h>
 
 #include "compat.cuh"
-
-#define THREADS 1024
-#define BLOCKS(N) (N + THREADS - 1) / THREADS
+#include "threads.cuh"
 
 __global__ void respond_kernel(int64_t *__restrict__ cluster, int64_t *proposal,
                                int64_t *__restrict row,

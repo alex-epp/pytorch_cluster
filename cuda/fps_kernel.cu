@@ -2,8 +2,8 @@
 
 #include "compat.cuh"
 #include "utils.cuh"
+#include "threads.cuh"
 
-#define THREADS 1024
 
 template <typename scalar_t, int64_t Dim> struct Dist;
 

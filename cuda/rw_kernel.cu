@@ -2,9 +2,7 @@
 
 #include "compat.cuh"
 #include "utils.cuh"
-
-#define THREADS 1024
-#define BLOCKS(N) (N + THREADS - 1) / THREADS
+#include "threads.cuh"
 
 __global__ void uniform_rw_kernel(
     const int64_t *__restrict__ row, const int64_t *__restrict__ col,
